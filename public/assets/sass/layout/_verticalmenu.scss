@@ -1,0 +1,179 @@
+@media (min-width: 1025px) {
+    .layout-wrapper {
+        &.layout-overlay, &.layout-static {
+            .layout-menu-container {
+                padding: 0;
+                width: 230px;
+                height: calc(100% - 50px);
+                overflow: auto;
+                transition: transform $transitionDuration;
+
+                .layout-menu-content {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                &.layout-menu-container-inactive {
+                    transform: translateX(-100%);
+                }
+
+                .layout-menu-title {
+                    display: block;
+                    padding: 11px;
+                    font-size: 16px;
+                    color: $textSecondaryColor;
+                    border-bottom: 1px solid $dividerColor;
+                    letter-spacing: 2px;
+                }
+
+                .layout-menu {
+                    flex: 1 1 0;
+
+                    li {
+                        a {
+                            padding: 10px 12px;
+                            display: block;
+
+                            &:not(.p-disabled):hover {
+                                background-color: $primaryColor;
+                                color: $primaryTextColor;
+                            }
+
+                            i:first-child {
+                                font-size: 14px;
+                                vertical-align: middle;
+                                display: inline-block;
+                            }
+
+                            i.layout-menuitem-toggler {
+                                float: right;
+                                line-height: 22px;
+                            }
+
+                            > span {
+                                vertical-align: middle;
+                                display: inline-block;
+                                margin-left: 6px;
+                            }
+                        }
+
+                        &.p-menu-separator {
+                            border-top: 1px solid $dividerColor;
+                            margin: 0.25rem 0;
+                        }
+
+                        &.active-menuitem {
+                            > a {
+                                background-color: $menuitemActiveBgColor;
+                                color: $primaryColor;
+
+                                &:hover {
+                                    background-color: $primaryColor;
+                                    color: $primaryTextColor;
+                                }
+                            }
+                        }
+                    }
+
+                    > li {
+                        &:first-child {
+                            margin-top: 8px;
+                        }
+
+                        ul {
+                            background: $menuBgColor;
+
+                            li {
+                                a {
+                                    padding-left: 24px;
+                                }
+
+                                ul {
+                                    li {
+                                        a {
+                                            padding-left: 36px;
+                                        }
+
+                                        ul {
+                                            li {
+                                                a {
+                                                    padding-left: 48px;
+                                                }
+
+                                                ul {
+                                                    li {
+                                                        a {
+                                                            padding-left: 60px;
+                                                        }
+
+                                                        ul {
+                                                            li {
+                                                                a {
+                                                                    padding-left: 72px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .layout-menu-footer {
+                    padding-bottom: 10px;
+
+                    .layout-menu-footer-title {
+                        display: block;
+                        padding: 11px;
+                        font-size: 16px;
+                        color: $textSecondaryColor;
+                        border-bottom: 1px solid $dividerColor;
+                        letter-spacing: 2px;
+                    }
+
+                    .layout-menu-footer-content {
+                        padding: 10px 12px;
+                        color: $textColor;
+
+                        .p-progressbar {
+                            height: 5px;
+                            border: 0 none;
+                            margin: 16px 0 4px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.layout-overlay {
+            .layout-content {
+                padding-top: 50px;
+            }
+        }
+
+        &.layout-static {
+            .layout-content {
+                padding-top: 50px;
+                margin-left: 230px;
+                transition: margin-left $transitionDuration;
+            }
+
+            &.layout-static-inactive {
+                .layout-menu-container {
+                    transform: translateX(-100%);
+                }
+
+                .layout-content {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

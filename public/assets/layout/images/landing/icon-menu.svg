@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="16px" viewBox="0 0 19 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-/-Default-/-Light" transform="translate(-246.000000, -22.000000)" fill="#ffffff" fill-rule="nonzero">
+            <g id="topbar" transform="translate(216.000000, 0.000000)">
+                <g id="icon-menu" transform="translate(30.000000, 22.000000)">
+                    <rect id="Rectangle-path" x="0" y="6.6" width="19" height="2.4" rx="1.2"></rect>
+                    <rect id="Rectangle-path" x="0" y="0" width="19" height="2.4" rx="1.2"></rect>
+                    <rect id="Rectangle-path" x="0" y="13.2" width="19" height="2.4" rx="1.2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

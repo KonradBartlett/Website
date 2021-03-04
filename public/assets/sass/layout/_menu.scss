@@ -1,0 +1,202 @@
+.layout-wrapper {
+    .layout-menu-container {
+        background-color: $menuBgColor;
+        position: fixed;
+        z-index: 101;
+        top: 50px;
+        left: 0;
+        box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
+
+        .layout-menu {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                > a {
+                    cursor: pointer;
+                    color: $textColor;
+                    display: block;
+                    user-select: none;
+
+                    span {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 6px;
+                    }
+
+                    i {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    > span.menuitem-badge {
+                        background-color: $primaryColor;
+                        width: 18px;
+                        height: 18px;
+                        text-align: center;
+                        color: $primaryTextColor;
+                        font-size: 12px;
+                        float: right;
+                        position: relative;
+                        top: 2px;
+                        padding-top: 1px;
+                        border-radius: 50%;
+                    }
+
+                    &.rotated-icon {
+                        .layout-menuitem-icon {
+                            transform: rotate(90deg);
+                        }
+                    }
+
+                    .layout-menuitem-toggler {
+                        transition: transform $transitionDuration;
+                    }
+
+                    &.router-link-active {
+                        color: $primaryColor;
+                        font-weight: 700;
+                    }
+
+                    &.router-link-active, &.router-link-exact-active {
+                        color: $primaryColor;
+                    }
+
+                    &.active-menuitem-routerlink {
+                        color: $primaryColor;
+                        font-weight: 700;
+                    }
+
+                    &:not(:hover) {
+                        &.blue-theme {
+                            i {color: $blue}
+                        }
+
+                        &.green-theme {
+                            i {color: $green}
+                        }
+
+                        &.cyan-theme {
+                            i {color: $cyan}
+                        }
+
+                        &.purple-theme {
+                            i {color: $purple}
+                        }
+
+                        &.indigo-theme {
+                            i {color: $indigo}
+                        }
+
+                        &.yellow-theme {
+                            i {color: $yellow}
+                        }
+
+                        &.orange-theme {
+                            i {color: $orange}
+                        }
+
+                        &.pink-theme {
+                            i {color: $pink}
+                        }
+                    }
+
+                    &.rotated-icon {
+						.layout-menuitem-icon {
+							transform: rotate(90deg);
+						}
+					}
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    overflow: hidden;
+
+                    &.layout-submenu-container-enter {
+                        max-height: 0;
+                    }
+
+                    &.layout-submenu-container-enter-active {
+                        overflow: hidden;
+                        max-height: 1000px;
+                        transition: max-height 1s ease-in-out;
+                    }
+
+                    &.layout-submenu-container-enter-done {
+                        transform: none;
+                    }
+
+                    &.layout-submenu-container-exit {
+                        max-height: 1000px;
+                    }
+
+                    &.layout-submenu-container-exit-active {
+                        overflow: hidden;
+                        max-height: 0;
+                        transition: max-height 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+                    }
+                }
+
+                &.layout-root-menuitem {
+
+                    > .layout-menuitem-root-text {
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        padding: 1.5rem 0 0.5rem 1.5rem;
+                        color: $textColor;
+                    }
+
+                    > a {
+                        display: none !important;
+                    }
+                }
+
+                &.active-menuitem {
+                    > a {
+                        .layout-menuitem-toggler {
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+            }
+
+            .layout-menu-tooltip {
+                display:none;
+                padding: 0 5px;
+                position: absolute;
+                left: 61px;
+                top: 7px;
+                line-height: 1;
+
+                .layout-menu-tooltip-text {
+                    padding: 6px 8px;
+                    font-weight: 700;
+                    background-color: $primaryColor;
+                    color: $primaryTextColor;
+                    min-width: 75px;
+                    white-space: nowrap;
+                    text-align: center;
+                    border-radius: $borderRadius;
+                    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
+                }
+
+                .layout-menu-tooltip-arrow {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-color: transparent;
+                    border-style: solid;
+                    top: 50%;
+                    left: 0;
+                    margin-top: -5px;
+                    border-width: 5px 5px 5px 0;
+                    border-right-color: $primaryColor;
+                }
+            }
+        }
+    }
+}

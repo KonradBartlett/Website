@@ -1,0 +1,75 @@
+.layout-wrapper {
+    .layout-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+
+        .layout-breadcrumb {
+            background-color: $menuBgColor;
+            border-bottom: 1px solid $dividerColor;
+            min-height: 42px;
+            padding: 0px 20px;
+            @include clearfix();
+
+            ul {
+                margin: 10px 0 0 0;
+                padding: 0;
+                list-style: none;
+                color: $textColor;
+                display: inline-block;
+
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: $textColor;
+                    text-transform: capitalize;
+                    padding: 0 2px;
+
+                    button {
+                        font-family: $fontFamily;
+                        color: $textColor;
+
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            .layout-breadcrumb-options {
+                float: right;
+                padding: 0;
+                height: 100%;
+                cursor: pointer;
+
+                button {
+                    font-family: $fontFamily;
+                    color: $textSecondaryColor;
+                    display: inline-block;
+                    width: 42px;
+                    height: 42px;
+                    font-size: 20px;
+                    line-height: 42px;
+                    text-align: center;
+                    border-radius: 0;
+
+                    &:hover {
+                        background-color: $primaryColor;
+                        color: $primaryTextColor;
+                    }
+
+                    i {
+                        font-size: 18px;
+                        line-height: inherit;
+                    }
+                }
+            }
+        }
+
+        .layout-content-container {
+            padding: 20px 20px;
+            flex: 1 1 0;
+        }
+    }
+}

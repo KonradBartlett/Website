@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: $fontSize;
+}
+
+/* Main Layout */
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    background-color: $bodyBgColor;
+    color: $textColor;
+
+    .layout-mask {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+    }
+}

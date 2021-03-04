@@ -1,0 +1,177 @@
+@media (min-width: 1025px) {
+    .layout-wrapper {
+        &.layout-horizontal {
+            .layout-content {
+                padding-top: 100px;
+            }
+
+            .layout-menu-container {
+                padding: 0 20px;
+                width: 100%;
+
+                .layout-menu-title {
+                    display: none;
+                }
+
+                .layout-menu {
+                    > li {
+                        display: inline-block;
+                        position: relative;
+
+                        &.layout-root-menuitem {
+                            > .layout-menuitem-root-text {
+                                display: none !important;
+                            }
+
+                            > a {
+                                display: block !important;
+                            }
+                        }
+
+                        > a {
+                            padding: 12px;
+                            height: 50px;
+                            margin-bottom: -4px;
+                            border-bottom: 2px solid transparent;
+                            transition: border-bottom-color $transitionDuration, background-color $transitionDuration;
+
+                            &:not(.p-disabled):hover {
+                                border-bottom-color: $primaryColor;
+                                color: $primaryColor;
+                            }
+                        }
+
+                        &.active-menuitem {
+                            > a {
+                                background-color: $primaryColor;
+                                color: $primaryTextColor;
+
+                                &:not(.p-disabled):hover {
+                                    color: $primaryTextColor;
+                                }
+                            }
+
+                            > ul {
+                                top: 50px;
+                                left: 0;
+                                position: absolute;
+                                display: block;
+                            }
+                        }
+
+                        ul {
+                            min-width: 200px;
+                            box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
+                        }
+
+                        > ul {
+                            display: none;
+                            margin: 0;
+                            padding: 0;
+                            max-height: none;
+                            list-style-type: none;
+                            background-color: $menuBgColor;
+
+                            > li {
+                                a {
+                                    padding: 8px 12px;
+                                    display: block;
+
+                                    span {
+                                        margin-left: 6px;
+                                    }
+
+                                    i.layout-menuitem-toggler {
+                                        float: right;
+                                        display: block;
+                                        margin-top: 4px;
+                                    }
+
+                                    &:not(.p-disabled):hover {
+                                        background-color: $primaryColor;
+                                        color: $primaryTextColor;
+                                    }
+                                }
+
+                                &.p-menu-separator {
+                                    border-top: 1px solid $dividerColor;
+                                    margin: 0.25rem 0;
+                                }
+
+                                &.active-menuitem {
+                                    > a {
+                                        color: $primaryColor;
+
+                                        &:not(.p-disabled):hover {
+                                            color: $primaryTextColor;
+                                        }
+                                    }
+
+                                    > ul {
+                                        display: block;
+                                    }
+                                }
+
+                                ul {
+                                    width: 100%;
+                                    box-shadow: none;
+
+                                    li {
+                                        a {
+                                            padding-left: 24px;
+                                        }
+
+                                        ul {
+                                            li {
+                                                a {
+                                                  padding-left: 36px;
+                                                }
+
+                                                ul {
+                                                    li {
+                                                        a {
+                                                          padding-left: 48px;
+                                                        }
+
+                                                        ul {
+                                                            li {
+                                                                a {
+                                                                    padding-left: 60px;
+                                                                }
+
+                                                                ul {
+                                                                    li {
+                                                                        a {
+                                                                            padding-left: 72px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    li {
+                        > a {
+                            span.menuitem-badge {
+                                float: none;
+                                top: 0px;
+                            }
+                        }
+                    }
+                }
+
+                .layout-menu-footer {
+                    display: none;
+                }
+            }
+        }
+    }
+}

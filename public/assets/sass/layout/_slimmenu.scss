@@ -1,0 +1,187 @@
+@media (min-width: 1025px) {
+    .layout-wrapper {
+        &.layout-slim {
+
+            .layout-content {
+                padding-top: 50px;
+                margin-left: 60px;
+            }
+
+            .layout-menu-container {
+                padding: 0;
+                height: 100%;
+                width: 60px;
+                overflow: visible;
+                top: 50px;
+                position: fixed;
+
+                .layout-menu-title, .layout-menu-footer {
+                    display: none;
+                }
+
+                .layout-menu {
+                    padding: 8px 0 0 0;
+
+                    > li {
+                        position: relative;
+                        
+                        &.layout-root-menuitem {
+                            > .layout-menuitem-root-text {
+                                display: none !important;
+                            }
+
+                            > a {
+                                display: block !important;
+                            }
+                        }
+
+                        > a {
+                            text-align: center;
+                            padding-left: 0;
+                            padding-right: 0;
+                            padding-top: 14px;
+                            padding-bottom: 14px;
+
+                            i:first-child {
+                                font-size: 19px;
+                            }
+
+                            span, .layout-menuitem-toggler {
+                                display: none;
+                            }
+
+                            &:hover + .layout-menu-tooltip {
+                                display: block;
+                            }
+
+                            &:not(.p-disabled):hover {
+                                background-color: $primaryColor;
+                                color: $primaryTextColor;
+                            }
+                        }
+
+                        &.p-menu-separator {
+                            border-top: 1px solid $dividerColor;
+                            margin: 0.25rem 0;
+                        }
+
+                        > ul {
+                            box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.3);
+                            background-color: $menuBgColor;
+                            position: absolute;
+                            top: 0;
+                            left: 60px;
+                            min-width: 200px;
+                            max-height: none;
+                            display: none;
+
+                            li {
+                                a {
+                                    padding: 8px 12px;
+                                    display: block;
+
+                                    span {
+                                        margin-left: 6px;
+                                    }
+
+                                    i.layout-menuitem-toggler {
+                                        float: right;
+                                        display: block;
+                                        margin-top: 4px;
+                                    }
+
+                                    &:not(.p-disabled):hover {
+                                        background-color: $primaryColor;
+                                        color: $primaryTextColor;
+                                    }
+                                }
+
+                                &.p-menu-separator {
+                                    border-top: 1px solid $dividerColor;
+                                    margin: 0.25rem 0;
+                                }
+
+                                &.active-menuitem {
+                                    > a {
+                                        color: $primaryColor;
+
+                                        &:hover {
+                                            color: $primaryTextColor;
+                                        }
+                                    }
+
+                                    > ul {
+                                        display: block;
+                                    }
+                                }
+
+                                ul {
+                                    width: 100%;
+                                    box-shadow: none;
+
+                                    li {
+                                        a {
+                                            padding-left: 24px;
+                                        }
+
+                                        ul {
+                                            li {
+                                                a {
+                                                padding-left: 36px;
+                                                }
+
+                                                ul {
+                                                    li {
+                                                        a {
+                                                        padding-left: 48px;
+                                                        }
+
+                                                        ul {
+                                                            li {
+                                                                a {
+                                                                padding-left: 60px;
+                                                                }
+
+                                                                ul {
+                                                                    li {
+                                                                        a {
+                                                                            padding-left: 72px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.active-menuitem {
+                        > a {
+                            background-color: $menuitemActiveBgColor;
+                            color: $primaryColor;
+
+                            &:hover {
+                            background-color: $primaryColor;
+                            color: $primaryTextColor;
+                            }
+
+                            &:hover + .layout-menu-tooltip {
+                            display: none;
+                            }
+                        }
+
+                            > ul {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
