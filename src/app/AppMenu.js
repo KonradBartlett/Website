@@ -127,10 +127,10 @@ const AppSubmenu = (props) => {
 			{item.items && props.root === true && <div className='arrow'></div>}
 			{renderLink(item, i)}
 			{tooltip}
-				<CSSTransition classNames="layout-submenu-container" timeout={{ enter: 400, exit: 400 }} in={item.items && (props.root && !((isHorizontal() || isSlim()) && !isMobile() && (!isSlim() || (isSlim() && activeIndex !== null))) ? true : active)} unmountOnExit>
-					<AppSubmenu items={item.items} onMenuItemClick={props.onMenuItemClick} layoutMode={props.layoutMode}
-						menuActive={props.menuActive} parentMenuItemActive={active} />
-				</CSSTransition>
+			<CSSTransition classNames="layout-submenu-container" timeout={{ enter: 400, exit: 400 }} in={item.items && (props.root && !((isHorizontal() || isSlim()) && !isMobile() && (!isSlim() || (isSlim() && activeIndex !== null))) ? true : active)} unmountOnExit>
+				<AppSubmenu items={item.items} onMenuItemClick={props.onMenuItemClick} layoutMode={props.layoutMode}
+					menuActive={props.menuActive} parentMenuItemActive={active} />
+			</CSSTransition>
 
 		</li>
 	});

@@ -12,7 +12,7 @@ const AppBreadcrumb = () => {
     return (
         <div className="layout-breadcrumb">
             <ul>
-                <li><button type="button" className="p-link" onClick={() => history.push('/')}><i className="pi pi-home"></i></button></li>
+                <li><button type="button" className="p-link" onClick={() => history.push('/')}><i className="fas pi-fw fa-home"></i></button></li>
                 {
                     location.pathname === '/' ? <li>/</li> : paths.map((path, index) => <li key={index}>{path === '' ? '/' : path}</li>)
                 }

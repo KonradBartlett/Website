@@ -1,0 +1,50 @@
+.dashboard{
+
+    .card{
+        margin: 10px;
+    }
+
+    .top{
+        display: grid;
+        grid-template-columns: 90% 10%;
+        width: 80%;
+
+        .left{
+            display: grid;
+            grid-template-columns: 20% 50%;
+            align-items: center;  
+
+            .CircularProgressbar {
+                width: 80%;
+                stroke:#5C6BC0;
+                .CircularProgressbar-path{
+                    stroke: #5C6BC0;
+                }
+            }
+
+        }
+        .right{
+            .p-button{
+                height: 100px;
+                width: 300px;
+            }
+        }
+    }
+
+    .center{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+
+        .bestWorst {
+            background-color: #1A2330;
+            margin-bottom: 7px;
+            padding: 2px;
+        }
+    }
+
+    .bottom {
+        display: grid;
+        grid-template-columns: auto auto;
+
+    }
+}

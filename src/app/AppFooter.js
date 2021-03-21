@@ -4,7 +4,7 @@ const AppFooter = () => {
 
     return (
         <div className="layout-footer">
-            <span className="footer-text-left">Konrad.Bartlett@Outlook.com</span>
+            <span className="footer-text-left">E: Konrad.Bartlett@Outlook.com | P: (705) 875-8730</span>
         </div>
     )
 
